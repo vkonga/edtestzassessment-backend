@@ -82,7 +82,7 @@ app.post("/signup/",authenticateToken ,async (request,response) => {
     }
 });
 
-app.post("/signin/",authenticateToken ,async (request, response) => {
+app.post("/signin/",async (request, response) => {
     const {username,password} = request.body;
     const findUser = `
                 SELECT * FROM users WHERE username = '${username}';
