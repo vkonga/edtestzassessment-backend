@@ -6,6 +6,7 @@ const cors = require('cors');
 const {open} = require('sqlite');  // import open method from sqlite package
 const path = require('path');
 app.use(express.json());
+app.use(cors());
 const sqlite3 = require('sqlite3');
 const dbPath = path.join(__dirname,"appointments.db");
 let db = null;
