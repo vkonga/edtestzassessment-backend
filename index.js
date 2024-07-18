@@ -58,7 +58,7 @@ app.get("/" ,authenticateToken ,async (request, response) => {
                 response.send(user);
 });
 
-app.post("/signup/",authenticateToken ,async (request,response) => {
+app.post("/signup/" ,async (request,response) => {
     const {username,password} = request.body;
     const hashedPassword = await bcrypt.hash(password,8);
     const findUser = `
